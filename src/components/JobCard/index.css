@@ -1,0 +1,136 @@
+.jobs-card-con {
+  display: flex;
+}
+
+.jobs-card-rating {
+  display: flex;
+  align-items: center;
+  margin-left: 5px;
+}
+
+.location-employtype-con {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 9px;
+}
+
+.flexing-location-employment-type {
+  display: flex;
+}
+
+.location-and-employ-flex {
+  display: flex;
+  margin-right: 15px;
+}
+
+.linked-job-card-items {
+  text-decoration: none;
+}
+
+.listed-item {
+  background-color: #202020;
+  list-style-type: none;
+  padding: 20px;
+  margin-bottom: 20px;
+  width: 65vw;
+  border-radius: 15px;
+}
+
+@media screen and (min-width: 768px) {
+  .job-card-company-url {
+    height: 7vh;
+    width: 5vw;
+  }
+}
+
+.job-card-heading {
+  color: white;
+  font-size: 18px;
+  font-family: roboto;
+  margin-left: 10px;
+}
+
+.card-rating-icon {
+  color: gold;
+  font-size: 17px;
+  margin-bottom: 10px;
+  margin: 3px;
+}
+
+.rating-card {
+  color: white;
+  font-size: 14px;
+  margin-top: 4px;
+}
+
+.card-location-and-employetype-icon {
+  color: white;
+  font-size: 19px;
+}
+
+.card-location-name {
+  font-size: 17px;
+  color: white;
+  margin-left: 5px;
+}
+
+.card-location-employement {
+  font-size: 17px;
+  color: white;
+  margin-left: 5px;
+}
+
+.card-lpa {
+  color: white;
+}
+
+.hr-line {
+  border: 0.5px solid #7e858e;
+}
+
+.heading-description {
+  color: white;
+  font-size: 18px;
+  font-family: roboto;
+  margin-top: 9px;
+}
+
+.description-card {
+  color: white;
+  font-size: roboto;
+}
+
+@media screen and (max-width: 768px) {
+  .listed-item {
+    background-color: #202020;
+    list-style-type: none;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    width: auto;
+  }
+  .job-card-company-url {
+    height: 60px;
+    width: 50px;
+  }
+  .card-lpa {
+    color: white;
+    font-size: 15px;
+  }
+  .card-location-name {
+    font-size: 10px;
+    color: white;
+    margin-left: 3px;
+  }
+  .card-location-employement {
+    font-size: 10px;
+    color: white;
+    margin-left: 3px;
+  }
+  .card-location-and-employetype-icon {
+    color: white;
+    font-size: 10px;
+  }
+}

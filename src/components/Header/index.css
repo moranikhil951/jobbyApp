@@ -1,0 +1,108 @@
+.headers-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #202020;
+  height: 15%;
+  padding: 30px;
+  width: 100%;
+}
+
+.website-image {
+  height: 50px;
+}
+
+.flex-info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.Home-heading {
+  margin: 10px;
+  color: #ffffff;
+  font-size: 15px;
+}
+
+.Jobs-heading {
+  margin: 10px;
+  color: #ffffff;
+  font-size: 15px;
+}
+
+.buttonLogout {
+  background-color: #4f46e5;
+  color: white;
+  padding: 5px;
+  border: none;
+  outline: none;
+  height: 25px;
+  font-size: 14px;
+  cursor: pointer;
+  width: 80px;
+  border: 4px;
+}
+
+@media screen and (max-width: 768px) {
+  .headers-container {
+    display: none;
+  }
+  .website-image {
+    height: 0px;
+  }
+  .buttonLogout {
+    width: none;
+    display: none;
+  }
+  .Home-heading {
+    font-size: 0px;
+  }
+
+  .Jobs-heading {
+    font-size: 0px;
+  }
+  .headers-container-mobile {
+    background-color: #202020;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #202020;
+
+    padding: 10px;
+    width: 100%;
+    max-width: 1300px;
+  }
+  .website-mobile-image {
+    height: 30px;
+  }
+  .home-icon {
+    font-size: 20px;
+    color: white;
+    margin-right: 20px;
+  }
+  .jobs-icon {
+    font-size: 20px;
+    color: white;
+    margin-right: 20px;
+  }
+  .logout {
+    font-size: 130px;
+    color: white;
+    margin-right: 20px;
+  }
+  .logout-icon-button {
+    background-color: transparent;
+    color: white;
+    border: 0px;
+    outline: none;
+  }
+  .info-mobile-icon-con {
+    margin-left: auto;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .headers-container-mobile {
+    display: none;
+  }
+}

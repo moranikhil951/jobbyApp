@@ -1,0 +1,35 @@
+.listed-containers {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 20px;
+  width: 30%;
+}
+
+.imageUrl {
+  width: 30px;
+}
+
+.skillNames {
+  color: white;
+  font-size: 20px;
+  margin: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .imageUrl-skill {
+    width: 30px;
+  }
+  .listed-containers {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 10px;
+    width: 40%;
+  }
+  .skillNames {
+    color: white;
+    font-size: 10px;
+    margin: 10px;
+  }
+}

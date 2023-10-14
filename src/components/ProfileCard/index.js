@@ -1,6 +1,6 @@
 import {Component} from 'react'
 
-import Cookies from 'cookies-js'
+import Cookies from 'js-cookie'
 
 import Loader from 'react-loader-spinner'
 
@@ -57,7 +57,7 @@ class ProfileCard extends Component {
       <div className="profile-container">
         <img
           src={profileData.profileImageUrl}
-          alt={profileData.name}
+          alt="profile"
           className="profile-image"
         />
         <h1 className="name">{profileData.name}</h1>

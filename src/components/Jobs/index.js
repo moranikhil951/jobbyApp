@@ -1,6 +1,6 @@
 import {Component} from 'react'
 import Loader from 'react-loader-spinner'
-import Cookie from 'js-cookie'
+import Cookies from 'js-cookie'
 import {BsSearch} from 'react-icons/bs'
 import JobCard from '../JobCard'
 
@@ -71,7 +71,7 @@ class Jobs extends Component {
   getJobsDetails = async () => {
     this.setState({updateStatus: apiStatusConstants.loading})
     const {searchInput, minimumSalaray, employeeType} = this.state
-    const jwtToken = Cookie.get('jwt_token')
+    const jwtToken = Cookies.get('jwt_token')
     const apiUrl = `https://apis.ccbp.in/jobs?employment_type=${employeeType.join()}&minimum_package=${minimumSalaray}&search=${searchInput}`
     const options = {
       headers: {
@@ -224,7 +224,7 @@ class Jobs extends Component {
                 placeholder="Search"
               />
               <button
-                data-testedid="searchButton"
+                data-testid="searchButton"
                 type="button"
                 className="button-search"
               >

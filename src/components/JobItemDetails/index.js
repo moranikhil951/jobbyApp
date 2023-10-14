@@ -102,7 +102,7 @@ class JobItemDetails extends Component {
       />
       <h1 className="error-jobs-heading">Oops! Something Went Wrong</h1>
       <p className="error-jobs-para">
-        We cannot seems to find the page you are looking for
+        We cannot seem to find the page you are looking for
       </p>
       <button type="button" id="button" className="Retry-button">
         Retry
@@ -139,6 +139,16 @@ class JobItemDetails extends Component {
       skillsList,
       similarJobsList,
     } = this.state
+    const {
+      title,
+      companyLogoUrl,
+      rating,
+      location,
+      employmentType,
+      packagePerAnnum,
+      companyWebsiteUrl,
+    } = jobsList
+    const {description, imageUrl} = lifeAtCompanyLists
     return (
       <>
         <div className="responsive-container">
@@ -146,14 +156,14 @@ class JobItemDetails extends Component {
             <div className="company-info">
               <img
                 alt="job details company logo"
-                src={jobsList.companyLogoUrl}
+                src={companyLogoUrl}
                 className="company-url"
               />
               <div>
-                <h1 className="title-heading">{jobsList.title}</h1>
+                <h1 className="title-heading">{title}</h1>
                 <div className="rating-container">
                   <AiFillStar className="rating-icon" />
-                  <p className="rating">{jobsList.rating}</p>
+                  <p className="rating">{rating}</p>
                 </div>
               </div>
             </div>
@@ -162,26 +172,26 @@ class JobItemDetails extends Component {
               <div className="mini-flex-location-and-jo-type">
                 <div className="location-and-job-type-container">
                   <MdLocationOn className="location-icon" />
-                  <p className="location-para">{jobsList.location}</p>
+                  <p className="location-para">{location}</p>
                 </div>
                 <div className="location-and-job-type-container">
                   <RiHandbagFill className="hand-bag-fill-icon" />
-                  <p className="location-para">{jobsList.employmentType}</p>
+                  <p className="location-para">{employmentType}</p>
                 </div>
               </div>
-              <p className="lpa">{jobsList.packagePerAnnum}</p>
+              <p className="lpa">{packagePerAnnum}</p>
             </div>
             <hr className="horizantal-line" />
             <div className="visit-container">
               <h1 className="description-heading">Description</h1>
               <div className="flex-link">
-                <a className="visit-link" href={jobsList.companyWebsiteUrl}>
+                <a className="visit-link" href={companyWebsiteUrl}>
                   Visit
                 </a>
                 <FiExternalLink className="visit-icon" />
               </div>
             </div>
-            <p className="description-para">{lifeAtCompanyLists.description}</p>
+            <p className="description-para">{description}</p>
 
             <h1 className="skill-heading">Skills</h1>
             <ul className="unOrdered-list">
@@ -192,17 +202,15 @@ class JobItemDetails extends Component {
             <div>
               <h1 className="lifeAtCompany-heading">Life at Company</h1>
               <div className="lifeAtCompany-container">
-                <p className="description-para">
-                  {lifeAtCompanyLists.description}
-                </p>
+                <p className="description-para">{description}</p>
                 <img
-                  src={lifeAtCompanyLists.imageUrl}
+                  src={imageUrl}
                   alt="life at company"
                   className="lifeAtCompaneyImage"
                 />
               </div>
               <img
-                src={lifeAtCompanyLists.imageUrl}
+                src={imageUrl}
                 alt="life at company"
                 className="imageCompany"
               />

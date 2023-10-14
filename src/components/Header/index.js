@@ -18,26 +18,30 @@ const Header = props => {
         <Link to="/">
           <img
             src="https://assets.ccbp.in/frontend/react-js/logo-img.png"
-            alt="website"
+            alt="website logo"
             className="website-image"
           />
         </Link>
         <div>
-          <div className="flex-info">
+          <ul className="flex-info">
             <Link to="/">
-              <h1 className="Home-heading">Home</h1>
+              <li>
+                <h1 className="Home-heading">Home</h1>
+              </li>
             </Link>
             <Link to="/jobs">
-              <h1 className="Home-heading">Jobs</h1>
+              <li>
+                <h1 className="Home-heading">Jobs</h1>
+              </li>
             </Link>
-          </div>
+          </ul>
         </div>
 
         <button type="button" className="buttonLogout" onClick={onClickLogout}>
           Logout
         </button>
       </div>
-      <div className="headers-container-mobile">
+      <ul className="headers-container-mobile">
         <div>
           <Link to="/">
             <img
@@ -48,23 +52,29 @@ const Header = props => {
           </Link>
         </div>
         <div className="info-mobile-icon-con">
-          <div className="flex-info">
+          <ul className="flex-info">
             <Link to="/">
-              <AiFillHome className="home-icon" />
+              <li>
+                <AiFillHome className="home-icon" />
+              </li>
             </Link>
             <Link to="/jobs">
-              <RiHandbagFill className="jobs-icon" />
+              <li>
+                <RiHandbagFill className="jobs-icon" />
+              </li>
             </Link>
-            <button
-              type="button"
-              className="logout-icon-button"
-              onClick={onClickLogout}
-            >
-              <FiLogOut className="logout-icon" />
-            </button>
-          </div>
+            <li>
+              <button
+                type="button"
+                className="logout-icon-button"
+                onClick={onClickLogout}
+              >
+                <FiLogOut className="logout-icon" />
+              </button>
+            </li>
+          </ul>
         </div>
-      </div>
+      </ul>
     </nav>
   )
 }

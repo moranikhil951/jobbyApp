@@ -6,7 +6,7 @@ import {Redirect} from 'react-router-dom'
 import './index.css'
 
 class Login extends Component {
-  state = {username: '', password: '', errorMsg: false}
+  state = {username: '', password: '', errorMsgShow: false}
 
   inputPassword = event => {
     this.setState({password: event.target.value})
@@ -24,6 +24,10 @@ class Login extends Component {
     history.replace('/')
   }
 
+  errorMsgSubmit = errorMsg => {
+    this.setState({errorMsg, errorMsgShow: true})
+  }
+
   onLogin = async event => {
     event.preventDefault()
     const {username, password} = this.state
@@ -38,11 +42,11 @@ class Login extends Component {
     if (response.ok === true) {
       this.submitSuccess(data.jwt_token)
     }
-    this.setState({errorMsg: true})
+    this.errorMsgSubmit(data.error_msg)
   }
 
   render() {
-    const {username, password, errorMsg} = this.state
+    const {username, password, errorMsg, errorMsgShow} = this.state
 
     const jwtToken = Cookies.get('jwt_token')
     if (jwtToken !== undefined) {
@@ -87,11 +91,7 @@ class Login extends Component {
             <button type="submit" className="login-button">
               Login
             </button>
-            {errorMsg ? (
-              <p className="error-message">
-                Username and Password did not match
-              </p>
-            ) : null}
+            {errorMsgShow ? <p className="error-message">{errorMsg}</p> : null}
           </form>
         </div>
       </div>
